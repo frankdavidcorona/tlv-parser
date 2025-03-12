@@ -178,6 +178,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-Your Name - [@yourtwitter](https://twitter.com/yourtwitter) - frank.corona@pm.me
+Your Name - [@chaplindev](https://twitter.com/chaplindev) - frank.corona@pm.me
 
 Project Link: [https://github.com/frankdavidcorona/tlv-parser](https://github.com/frankdavidcorona/tlv-parser)
