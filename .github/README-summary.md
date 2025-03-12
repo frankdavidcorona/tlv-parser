@@ -23,7 +23,7 @@
 
 ## 🔗 Links
 
-- [Live Demo](https://emv-tlv-parser.vercel.app)
+- [Live Demo](https://tlv-parser.vercel.app)
 - [Documentation](https://github.com/frankdavidcorona/tlv-parser#readme)
 - [Examples](/examples)
 

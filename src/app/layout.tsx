@@ -13,9 +13,43 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'EMV TLV Parser',
+  title: 'EMV TLV Parser | Payment Systems Development Tool',
   description:
-    'A specialized tool for payment systems developers to parse, analyze, and debug EMV card data with comprehensive tag information and bit-level field analysis.',
+    'Advanced tool for parsing EMV (Europay, Mastercard, Visa) TLV data with comprehensive tag information, bit-level field analysis for TVR, AIP, AUC, and support for both 1-byte and 2-byte tags.',
+  keywords: [
+    'EMV',
+    'TLV',
+    'parser',
+    'payment systems',
+    'Terminal Verification Results',
+    'Application Interchange Profile',
+    'Application Usage Control',
+    'card data',
+    'hex parsing',
+  ],
+  authors: [
+    {
+      name: 'Frank David Corona',
+      url: 'https://github.com/frankdavidcorona',
+    },
+  ],
+  creator: 'Frank David Corona',
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://tlv-parser.vercel.app',
+    title: 'EMV TLV Parser | Payment Systems Development Tool',
+    description:
+      'Advanced tool for parsing EMV TLV data with comprehensive tag information and bit-level field analysis',
+    siteName: 'EMV TLV Parser',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'EMV TLV Parser | Payment Systems Development Tool',
+    description:
+      'Advanced tool for parsing EMV TLV data with comprehensive tag information and bit-level field analysis',
+    creator: '@chaplindev',
+  },
 };
 
 export default function RootLayout({

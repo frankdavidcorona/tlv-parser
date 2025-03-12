@@ -25,7 +25,7 @@ A modern web-based tool for parsing and analyzing EMV (Europay, Mastercard, and 
 
 ## Demo
 
-Try the live demo: [EMV TLV Parser Demo](https://emv-tlv-parser.vercel.app)
+Try the live demo: [EMV TLV Parser Demo](https://tlv-parser.vercel.app)
 
 ## Installation
 
