@@ -12,4 +12,7 @@ typescript
 nextjs
 react
 banking-software
-card-payment 
+card-payment
+tag-search
+emv-tag-lookup
+payment-data-analysis 

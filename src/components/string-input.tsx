@@ -13,6 +13,7 @@ import {
 } from '@/components/ui/card';
 import { parseTLV, TLVItem } from '@/lib/tlv-utils';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Search } from 'lucide-react';
 
 // Custom error class for validation errors
 class ValidationError extends Error {
@@ -36,10 +37,15 @@ export function StringInput() {
   const [result, setResult] = useState<TLVItem[] | null>(null);
   const [error, setError] = useState<ValidationError | null>(null);
   const [activeTab, setActiveTab] = useState('structured');
+  const [searchQuery, setSearchQuery] = useState('');
 
   function handleInputChange(e: React.ChangeEvent<HTMLInputElement>) {
     setInputValue(e.target.value);
     setError(null);
+  }
+
+  function handleSearchChange(e: React.ChangeEvent<HTMLInputElement>) {
+    setSearchQuery(e.target.value);
   }
 
   function handleSubmit(e: React.FormEvent) {
@@ -54,6 +60,8 @@ export function StringInput() {
       const parsedData = parseTLV(inputValue);
       setResult(parsedData);
       setError(null);
+      // Reset search when new data is parsed
+      setSearchQuery('');
     } catch (err) {
       if (err instanceof Error) {
         // Convert regular Error to ValidationError
@@ -77,6 +85,7 @@ export function StringInput() {
     setInputValue('');
     setResult(null);
     setError(null);
+    setSearchQuery('');
   }
 
   // Helper function to highlight the error position in the input
@@ -105,6 +114,20 @@ export function StringInput() {
         </span>
         {suffix}
       </>
+    );
+  }
+
+  // Filter results based on search query
+  function getFilteredResults() {
+    if (!result) return [];
+    if (!searchQuery.trim()) return result;
+
+    const query = searchQuery.toLowerCase();
+    return result.filter(
+      (item) =>
+        item.tag.toLowerCase().includes(query) ||
+        item.name?.toLowerCase().includes(query) ||
+        item.description?.toLowerCase().includes(query)
     );
   }
 
@@ -194,6 +217,8 @@ export function StringInput() {
     );
   }
 
+  const filteredResults = getFilteredResults();
+
   return (
     <Card className="w-full max-w-2xl">
       <CardHeader>
@@ -243,9 +268,34 @@ export function StringInput() {
                 <TabsTrigger value="raw">Raw Data</TabsTrigger>
               </TabsList>
               <TabsContent value="structured" className="mt-4">
-                <div className="space-y-3">
-                  {result.map((item, index) => renderTLVItem(item, index))}
+                <div className="mb-4 relative">
+                  <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                    <Search className="h-4 w-4 text-muted-foreground" />
+                  </div>
+                  <Input
+                    type="search"
+                    placeholder="Search by tag, name, or description..."
+                    value={searchQuery}
+                    onChange={handleSearchChange}
+                    className="pl-10"
+                  />
                 </div>
+
+                {filteredResults.length > 0 ? (
+                  <div className="space-y-3">
+                    {filteredResults.map((item, index) =>
+                      renderTLVItem(item, index)
+                    )}
+                  </div>
+                ) : (
+                  <div className="text-center py-8 text-muted-foreground">
+                    {searchQuery ? (
+                      <p>No tags found matching &ldquo;{searchQuery}&rdquo;</p>
+                    ) : (
+                      <p>No parsed data available</p>
+                    )}
+                  </div>
+                )}
               </TabsContent>
               <TabsContent value="raw" className="mt-4">
                 {renderRawTLV()}

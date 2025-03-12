@@ -1,6 +1,24 @@
-# EMV TLV Parser
+## EMV TLV Parser
 
-> A specialized tool for payment systems developers to parse, analyze, and debug EMV (Europay, Mastercard, and Visa) TLV (Type-Length-Value) data with comprehensive tag information and bit-level field analysis.
+A modern web-based tool for parsing and analyzing EMV (Europay, Mastercard, and Visa) TLV (Type-Length-Value) data, designed specifically for payment systems developers, terminal integrators, and financial technology professionals.
+
+### Key Features
+
+- **Advanced TLV Parsing**: Parse EMV data with support for both 1-byte and 2-byte tags
+- **Tag Search Functionality**: Quickly find specific tags in large TLV strings
+- **Comprehensive EMV Tag Database**: Includes detailed information for 50+ standard EMV tags
+- **Specialized Field Parsing**: Detailed bit-level analysis of TVR, AIP, and AUC fields
+- **User-Friendly Interface**: Structured and raw data views with error highlighting
+- **Built with Modern Technologies**: Next.js 14+, React 19, TypeScript, and Tailwind CSS
+
+### Use Cases
+
+- Debug EMV payment transactions during terminal integration
+- Analyze card data during payment application development
+- Validate EMV data compliance with payment network specifications
+- Educational tool for understanding EMV data structures
+
+Try the live demo: [EMV TLV Parser Demo](https://tlv-parser.vercel.app)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Next.js](https://img.shields.io/badge/Next.js-14%2B-black)](https://nextjs.org/)
@@ -53,4 +71,4 @@ const parsedData = parseTLV(tlvString);
 const tvrValue = '8000048000';
 const tvrDetails = parseTVR(tvrValue);
 // Output: Detailed breakdown of terminal verification results
-``` 
+```

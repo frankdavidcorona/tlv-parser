@@ -14,6 +14,7 @@ A modern web-based tool for parsing and analyzing EMV (Europay, Mastercard, and 
   - Application Usage Control (AUC)
 - **User-Friendly Interface**:
   - Structured and raw data views
+  - **Tag search functionality** to quickly find specific tags in parsed data
   - Error highlighting with position indicators
   - Responsive design for all device sizes
 - **Built with Modern Technologies**:
@@ -76,6 +77,16 @@ This will parse the string and display the results in a structured format:
 - Tag: 9F26 (Application Cryptogram)
 - Length: 8
 - Value: 123456789012345F
+
+### Searching for Specific Tags
+
+After parsing a TLV string, you can use the search input in the structured view to filter for specific tags:
+
+1. Enter your search term in the search box
+2. Results will be filtered in real-time as you type
+3. Search works across tag numbers, tag names, and descriptions
+
+This is particularly useful when working with large TLV strings containing many tags.
 
 ### Understanding TLV Format
 

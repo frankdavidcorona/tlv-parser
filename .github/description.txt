@@ -1,1 +1,1 @@
-EMV TLV Parser: A specialized tool for payment systems developers to parse, analyze, and debug EMV card data with comprehensive tag information and bit-level field analysis. 
+A modern web-based EMV TLV parser for payment systems developers with tag search, specialized field parsing, and comprehensive EMV tag database. 
