@@ -3,8 +3,8 @@ import { Footer } from '@/components/footer';
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
-      <main className="flex flex-col items-center p-4 md:p-8">
+    <div className="min-h-screen flex flex-col">
+      <main className="flex-1 flex flex-col items-center justify-center p-4 md:p-8">
         <div className="w-full max-w-2xl mx-auto">
           <h1 className="text-3xl font-bold tracking-tight text-center mb-4">
             EMV TLV Parser

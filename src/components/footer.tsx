@@ -3,7 +3,7 @@ import { Github, Star, GitFork, Heart, Code, AlertCircle } from 'lucide-react';
 
 export function Footer() {
   return (
-    <footer className="py-8 mt-8 text-center text-sm text-muted-foreground w-full px-4">
+    <footer className="py-8 mt-auto text-center text-sm text-muted-foreground w-full px-4">
       <div className="flex flex-col items-center gap-2">
         <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-3">
           <Link

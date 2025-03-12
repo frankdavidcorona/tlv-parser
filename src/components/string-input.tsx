@@ -62,6 +62,9 @@ export function StringInput() {
       setError(null);
       // Reset search when new data is parsed
       setSearchQuery('');
+
+      // Scroll to top when new results are shown
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     } catch (err) {
       if (err instanceof Error) {
         // Convert regular Error to ValidationError
