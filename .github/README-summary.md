@@ -1,6 +1,6 @@
 # EMV TLV Parser
 
-> A modern web-based tool for parsing and analyzing EMV (Europay, Mastercard, and Visa) TLV (Type-Length-Value) data with detailed tag information and specialized field parsing.
+> A specialized tool for payment systems developers to parse, analyze, and debug EMV (Europay, Mastercard, and Visa) TLV (Type-Length-Value) data with comprehensive tag information and bit-level field analysis.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Next.js](https://img.shields.io/badge/Next.js-14%2B-black)](https://nextjs.org/)
@@ -9,10 +9,13 @@
 
 ## 🚀 Features
 
-- **Advanced TLV Parsing**: Support for both 1-byte and 2-byte EMV tags
-- **Comprehensive EMV Tag Database**: 50+ standard EMV tags with detailed information
-- **Specialized Field Parsing**: TVR, AIP, and AUC bit-level analysis
-- **User-Friendly Interface**: Structured and raw data views with error highlighting
+- **EMV-Compliant Parsing**: Full support for EMV tag formats including extended (2-byte) tags
+- **Rich Tag Database**: 50+ EMV tags with names, descriptions, and format specifications
+- **Specialized EMV Field Analysis**:
+  - Terminal Verification Results (TVR) bit-level interpretation
+  - Application Interchange Profile (AIP) capabilities breakdown
+  - Application Usage Control (AUC) restrictions analysis
+- **Developer-Friendly Interface**: Structured and raw data views with error highlighting
 
 ## 🔍 Preview
 
@@ -40,12 +43,14 @@ npm run dev
 ## 📝 Example Usage
 
 ```typescript
-import { parseTLV } from '@/lib/tlv-utils';
+import { parseTLV, parseTVR, parseAIP } from '@/lib/tlv-utils';
 
 // Parse EMV TLV data
-const tlvString = '9F2608123456789012345F5F2A020840';
+const tlvString = '9F2608123456789012345F5F2A0208409505800004800082027C00';
 const parsedData = parseTLV(tlvString);
 
-console.log(parsedData);
-// Output: Array of parsed TLV items with tag information and descriptions
+// Analyze specific EMV fields
+const tvrValue = '8000048000';
+const tvrDetails = parseTVR(tvrValue);
+// Output: Detailed breakdown of terminal verification results
 ``` 

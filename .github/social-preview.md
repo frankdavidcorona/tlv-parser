@@ -12,8 +12,17 @@ The recommended dimensions for a GitHub social preview image are 1280×640px.
 
 ## Image Guidelines
 
-- Keep important content in the center of the image
-- Use a simple background that contrasts with the text
-- Include the project name prominently
-- Consider adding a brief tagline or visual representation of what the project does
-- Maintain good contrast for accessibility 
+- Include the project name "EMV TLV Parser" prominently
+- Consider adding visual elements related to payment cards or terminals
+- Use colors commonly associated with financial technology (blues, greens)
+- Include a sample of TLV data or parsing results to show functionality
+- Add a tagline like "Decode EMV payment data with precision"
+- Maintain good contrast for accessibility
+
+## Industry-Specific Elements to Consider
+
+- Credit card chip icon
+- Payment terminal illustration
+- EMV logo (if usage rights permit)
+- Hexadecimal data visualization
+- Financial technology visual elements 

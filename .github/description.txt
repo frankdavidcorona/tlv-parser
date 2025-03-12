@@ -1,1 +1,1 @@
-A modern web-based tool for parsing and analyzing EMV (Europay, Mastercard, and Visa) TLV (Type-Length-Value) data with detailed tag information and specialized field parsing. 
+EMV TLV Parser: A specialized tool for payment systems developers to parse, analyze, and debug EMV card data with comprehensive tag information and bit-level field analysis. 
