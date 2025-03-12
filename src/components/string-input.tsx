@@ -220,7 +220,7 @@ export function StringInput() {
   const filteredResults = getFilteredResults();
 
   return (
-    <Card className="w-full max-w-2xl">
+    <Card className="w-full">
       <CardHeader>
         <CardTitle>EMV TLV Parser</CardTitle>
         <CardDescription>
