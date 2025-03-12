@@ -1,0 +1,1 @@
+A modern web-based tool for parsing and analyzing EMV (Europay, Mastercard, and Visa) TLV (Type-Length-Value) data with detailed tag information and specialized field parsing. 

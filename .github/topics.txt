@@ -1,0 +1,13 @@
+emv
+tlv
+parser
+payment
+credit-card
+financial
+typescript
+nextjs
+react
+tailwindcss
+shadcn-ui
+banking
+fintech 
