@@ -39,7 +39,7 @@ Try the live demo: [EMV TLV Parser Demo](https://emv-tlv-parser.vercel.app)
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/emv-tlv-parser.git
+git clone https://github.com/frankdavidcorona/emv-tlv-parser.git
 cd emv-tlv-parser
 ```
 
