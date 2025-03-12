@@ -39,8 +39,8 @@ Try the live demo: [EMV TLV Parser Demo](https://emv-tlv-parser.vercel.app)
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/frankdavidcorona/emv-tlv-parser.git
-cd emv-tlv-parser
+git clone https://github.com/frankdavidcorona/tlv-parser.git
+cd tlv-parser
 ```
 
 2. Install dependencies:
